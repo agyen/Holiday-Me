@@ -12,14 +12,13 @@ export class LoginComponent implements OnInit {
   authenticationCode;
   idToken;
   isValid = false;
-  oidc_redirect_path = "https://google.com";
+  oidc_redirect_path: String;
 
   constructor(
     private openId: OpenidService,
     private activatedRoute: ActivatedRoute,
     private cookieservice: CookieService
   ) {}
-  // redirectToOIDCPage = this.oidc_redirect_path;
 
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe(queryParam => {
