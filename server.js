@@ -24,7 +24,7 @@ app.get("/*", function(req, res) {
   res.cookie("backend_url", process.env.REQUESTS_SERVICE);
   res.cookie("tokenurl", process.env.Backend_tokenRequestUrl);
   res.cookie("oidc", process.env.oidc);
-  
+  res.cookie("oidc_redirect_url", process.env.oidc_redirect);
   res.sendFile(path.join(__dirname + "/dist/Holiday-Me/index.html"));
 });
 
