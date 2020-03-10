@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   isValid = false;
   oidc_redirect_path: any;
 
-  private redirectToOIDCPage = this.oidc_redirect_path;
+   redirectToOIDCPage = this.oidc_redirect_path;
 
   constructor(private openId: OpenidService, 
               private activatedRoute: ActivatedRoute,
