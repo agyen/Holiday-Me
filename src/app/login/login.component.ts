@@ -15,15 +15,15 @@ export class LoginComponent implements OnInit {
   oidc_redirect_path;
 
   constructor(
-    private openId: OpenIdService,
-    private activatedRoute: ActivatedRoute,
-    private cookieService: CookieService
+    // private openId: OpenIdService,
+    // private activatedRoute: ActivatedRoute,
+    // private cookieService: CookieService
   ) {}
 
   ngOnInit() {
-    this.activatedRoute.queryParamMap.subscribe(queryParam => {
-      this.authenticationCode = queryParam.get("code");
-      this.oidc_redirect_path = this.openId.redirect_page_to_oidc;
-    });
+    // this.activatedRoute.queryParamMap.subscribe(queryParam => {
+    //   this.authenticationCode = queryParam.get("code");
+    //   this.oidc_redirect_path = this.openId.redirect_page_to_oidc;
+    // });
   }
 }
