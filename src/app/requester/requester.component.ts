@@ -16,6 +16,7 @@ export interface PeriodicElement {
   styleUrls: ["./requester.component.css"],
 })
 export class RequesterComponent implements OnInit {
+  isLoading = false;
   idToken;
   userName: String;
   ELEMENT_DATA: PeriodicElement[];
@@ -27,6 +28,7 @@ export class RequesterComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.isLoading = true;
     this.activatedRoute.queryParamMap.subscribe((queryParam) => {
       this.openId
         .postAuthenticationCodeForAccessAndIdToken(queryParam.get("code"))
